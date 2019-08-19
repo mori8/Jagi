@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 # 파일명 양식 : 학교명-전형명-학과명-평균내신등급.txt
-# 자기소개서의 각 문항은 "\n"으로 구분되어있음 -> readlines 이용해서 리스트화 가능
+# 자기소개서의 각 문항은 "\n"으로 구분되어있음 -> readlines 이용
 
 import json
 from collections import OrderedDict
