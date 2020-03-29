@@ -1,9 +1,9 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # 파일명 양식 : 학교명-전형명-학과명-평균내신등급.txt
 # 자기소개서의 각 문항은 "\n"으로 구분되어있음 -> readlines 이용
 
-import json
+
 from collections import OrderedDict
 import os
 import django
@@ -11,15 +11,15 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
 
-# 자기소개서 text file -> json
+# 자기소개서 text file -> dictionary -> DB
 
 
-def introductions_to_json():
+def introductions_to_dict():
 
     jagi_data = OrderedDict()
     index = 0
 
-    for root, subdirs, files in os.walk('/Users/soo/WebstormProjects/Jagi/database/txtfile'):
+    for root, subdirs, files in os.walk('database/txtfile'):
         for file in files:
             full_fname = os.path.join(root, file)
             s = os.path.splitext(full_fname)  # 확장자명 제거
@@ -50,9 +50,9 @@ def introductions_to_json():
 
 if __name__=='__main__':
     django.setup()
-    from app_jagi.models import CoverLetter
+    from app_jagi.models import CoverLetter  # 빨간줄 무시하셈
 
-    j = introductions_to_json()
+    j = introductions_to_dict()
     for i in range(len(j)):
         CoverLetter(school_name=j[i]['univ'],
                     major=j[i]['major'],

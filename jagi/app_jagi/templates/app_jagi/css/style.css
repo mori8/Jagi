@@ -1,0 +1,61 @@
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  line-height: 1.2em;
+  color: #333;
+}
+header {
+  height: 151px;
+}
+nav {
+  width: 600px;
+  margin: 75px 20px 0 0;
+  float: right;
+}
+@media (max-width : 600px) {
+  nav {
+    float: left;
+    display: none;
+  }
+}
+nav ul {
+  list-style: none;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #333;
+}
+nav ul li {
+  float: left;
+  margin: 0 20px;
+}
+nav a {
+  display: block;
+  height: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+#wrap {
+  width: auto;
+  text-align: left;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+#logo {
+  float: left;
+  display: block;
+  margin: 60px 0 0 40px;
+}
+#intro {
+  float: left;
+  display: block;
+  font-size: 24px;
+  font-weight: 100px;
+  color: #333;
+  margin: 76px 0 0 10px;
+  line-height: 1em;
+}
